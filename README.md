@@ -1,9 +1,8 @@
 ![Portada](./Picture/Portadadata.png)
 # Adidas Retail Insights: Análisis de Rendimiento Comercial y Rentabilidad
+Este proyecto desarrolla un análisis del conjunto de datos transaccionales de Adidas con el propósito de convertir información de ventas en indicadores clave de rendimiento (KPIs). El objetivo principal es evaluar el desempeño comercial, analizar la rentabilidad operativa y detectar oportunidades de mejora en los distintos canales de distribución (In-store, Outlet y Online).
 
-Este proyecto analiza el ecosistema transaccional de Adidas para transformar datos dispersos en KPIs estratégicos. El objetivo es evaluar el comportamiento de las ventas, auditar la eficiencia de los márgenes operativos y descubrir oportunidades de optimización en los diferentes canales de distribución (In-store, Outlet y Online).
-
-A través de un enfoque analítico progresivo, se implementan consultas en SQL Server (desde agrupaciones básicas hasta CTEs y Window Functions) para resolver preguntas críticas de negocio, identificar puntos ciegos logísticos y aportar recomendaciones de alto valor para la toma de decisiones de la alta gerencia.
+Mediante un enfoque analítico progresivo, se utilizan consultas en SQL Server, desde operaciones básicas de agregación hasta técnicas avanzadas como CTEs y Window Functions, para responder preguntas de negocio, identificar patrones relevantes en los datos y generar conclusiones orientadas a la toma de decisiones.
 
 ## Estructura del Proyecto
 
@@ -24,7 +23,7 @@ El resultado de la ingesta de datos y el tipado estructurado se puede corroborar
 
 ## Objetivos del Análisis y Preguntas de Negocio
 
-En este análisis, ayudo a la gerencia comercial y financiera de Adidas a responder lo siguiente:
+En este análisis se busca responder las siguientes preguntas de negocio relacionadas con el desempeño comercial y financiero de Adidas:
 
 1. **Rendimiento Global:** ¿Cuál es el total de ingresos por ventas y el beneficio operativo histórico generado por la marca?
 2. **Líneas de Producto:** ¿Cuáles son las categorías de producto que acumulan el mayor volumen de unidades vendidas?
@@ -70,7 +69,7 @@ SELECT
 FROM #AdidasStaging;
 ```
 ## Análisis Exploratorio de Datos e Insights
-En esta sección se ejecutan las consultas SQL diseñadas para resolver las interrogantes estratégicas de la gerencia comercial y financiera de Adidas. Con el fin de demostrar un dominio técnico sólido, el análisis se ha estructurado bajo un enfoque metodológico de complejidad progresiva.
+En esta sección se presentan las consultas SQL desarrolladas para analizar las principales preguntas de negocio relacionadas con el desempeño comercial y financiero de Adidas. El análisis se organiza mediante un enfoque progresivo, incorporando desde consultas fundamentales hasta técnicas más avanzadas de SQL para demostrar la evolución de la solución analítica.
 
 Cada consulta está enfocada en traducir los datos limpios en métricas de negocio, abarcando desde agregaciones tradicionales hasta el uso de funciones de ventana (*Window Functions*), expresiones de tabla comunes (`CTEs`) y subconsultas complejas.
 
@@ -82,7 +81,7 @@ SELECT
     FORMAT(SUM(Operating_Profit), 'C0') AS Beneficio_Operativo_Total
 FROM AdidasSales;
 ```
-![](./Picture/pregunta1.png)
+![PREGUNTA 1](./Picture/Pregunta1.png)
 
 **Insight:** Adidas registra una sólida escala comercial con $899.9M en ingresos históricos y una destacada eficiencia operativa, logrando capitalizar $332.1M como beneficio neto. Esto representa un margen operativo global del 36.9%, un indicador altamente saludable en el sector retail que confirma un control óptimo de los costos de producción y distribución.
 
@@ -162,6 +161,7 @@ GROUP BY YEAR(Invoice_Date), MONTH(Invoice_Date)
 ORDER BY Anio ASC, Mes ASC;
 ```
 ![PREGUNTA 6](./Picture/Pregunta6.png)
+
 **Insight:** El desglose temporal permite identificar picos de venta estacionales (asociados habitualmente a festividades, cambios de temporada o campañas de regreso a clases) y evaluar la tendencia general del negocio. Detectar estos patrones es fundamental para planificar el flujo de caja, anticipar las necesidades de contratación de personal temporal y programar las campañas de marketing antes de que inicien los meses de mayor demanda.
 
 ### 7. Talento Top en Ventas: Identificar las 3 ciudades con el mayor pico de facturación para cada una de las regiones analizadas.
