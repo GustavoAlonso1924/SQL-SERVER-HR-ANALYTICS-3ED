@@ -25,7 +25,7 @@ WHERE Operating_Margin IS NOT NULL
 GROUP BY Sales_Method
 ORDER BY AVG(Operating_Margin) DESC;
 
---- 4. ¿Qué regiones y estados de la federación concentran más del 60% de los ingresos totales de la compañía?
+--- 4. ¿Qué regiones y estados concentran la mayor participación de ingresos de la compañía?
 SELECT TOP 5 
     Region, 
     State, 
@@ -56,7 +56,7 @@ WHERE Invoice_Date IS NOT NULL AND Total_Sales IS NOT NULL
 GROUP BY YEAR(Invoice_Date), MONTH(Invoice_Date)
 ORDER BY Anio ASC, Mes ASC;
 
---- 7. Identificar las 3 ciudades con el mayor pico de facturación para cada una de las regiones analizadas.
+--- 7. Identificar las ciudades con mayor contribución de ingresos dentro de cada región analizada.
 WITH RankingCiudades AS (
     SELECT 
         Region, 
