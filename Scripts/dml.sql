@@ -46,7 +46,7 @@ WHERE Total_Sales IS NOT NULL AND Operating_Profit IS NOT NULL
 GROUP BY Retailer
 ORDER BY Ventas_Totales DESC;
 
---- 6. 
+--- 6. ¿Existe una tendencia de crecimiento en las ventas al comparar el comportamiento mensual de los datos?
 SELECT 
     YEAR(Invoice_Date) AS Anio,
     MONTH(Invoice_Date) AS Mes,
