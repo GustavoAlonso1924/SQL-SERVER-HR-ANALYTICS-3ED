@@ -146,7 +146,7 @@ ORDER BY Ventas_Totales DESC;
 ```
 ![PREGUNTA 5](./Picture/Pregunta5.png)
 
-**Insight:** El análisis permite identificar claramente a los distribuidores "estrella" que sostienen el volumen de ingresos y la rentabilidad de Adidas. Clasificarlos de esta manera ayuda a priorizar las negociaciones comerciales, asegurarles un suministro preferencial de inventario y diseñar promociones exclusivas con los socios que generan mayor valor real para el negocio.
+**Insight:** La evaluación del desempeño de los retailers permite identificar cuáles distribuidores generan mayor contribución en ventas y beneficio para Adidas. Esta información facilita el análisis de los socios comerciales más relevantes y su impacto en los resultados del negocio.
 
 ### 6. Estacionalidad y Tiempo: ¿Existe una tendencia de crecimiento en las ventas al comparar el comportamiento mensual de los datos?
 
@@ -164,8 +164,7 @@ ORDER BY Anio ASC, Mes ASC;
 
 **Insight:** El desglose temporal permite identificar picos de venta estacionales (asociados habitualmente a festividades, cambios de temporada o campañas de regreso a clases) y evaluar la tendencia general del negocio. Detectar estos patrones es fundamental para planificar el flujo de caja, anticipar las necesidades de contratación de personal temporal y programar las campañas de marketing antes de que inicien los meses de mayor demanda.
 
-### 7. Talento Top en Ventas: Identificar las 3 ciudades con el mayor pico de facturación para cada una de las regiones analizadas.
-
+### 7. Principales Ciudades por Ventas: Identificar las ciudades con mayor contribución de ingresos dentro de cada región analizada.
 ```sql
 WITH RankingCiudades AS (
     SELECT 
@@ -187,7 +186,7 @@ ORDER BY Region ASC, Ventas_Totales DESC;
 ```
 ![PREGUNTA 7](./Picture/Pregunta7.png)
 
-**Insight:** Este análisis permite identificar las ciudades con mayor contribución comercial dentro de cada región, facilitando la evaluación del desempeño geográfico y la identificación de los mercados con mayor potencial de ventas.
+**Insight:** Los resultados obtenidos permiten identificar las ciudades con mayor contribución de ingresos dentro de cada región, destacando los mercados con mejor desempeño comercial. Esta información facilita la evaluación del rendimiento geográfico y el reconocimiento de las zonas con mayor impacto en las ventas de la compañía.
 
 ### 8. Eficiencia Comercial: Categorizar las transacciones según el volumen de ventas e identificar el promedio de margen operativo en cada categoría.
 
@@ -212,7 +211,7 @@ ORDER BY MIN(Total_Sales) DESC;
 ```
 ![PREGUNTA 8](./Picture/Pregunta8.png)
 
-**Insight:** El análisis revela si los pedidos más grandes sacrifican rentabilidad (margen) para ganar volumen, o si mantienen la eficiencia. Identificar esta relación permite ajustar las políticas de descuentos por volumen y optimizar las estrategias de precios para asegurar que las transacciones masivas sigan siendo altamente rentables para Adidas.
+**Insight:** La segmentación de las transacciones por volumen de ventas permite analizar las diferencias en el margen operativo promedio entre cada categoría. Estos resultados ayudan a comprender la eficiencia comercial según el tamaño de las operaciones realizadas.
 
 ### 9. Precios vs. Demanda: ¿Existe una relación directa entre el precio por unidad establecido y el volumen total de unidades vendidas por producto?
 ```sql
