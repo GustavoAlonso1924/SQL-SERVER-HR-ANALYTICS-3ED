@@ -82,7 +82,7 @@ SELECT
     FORMAT(SUM(Operating_Profit), 'C0') AS Beneficio_Operativo_Total
 FROM AdidasSales;
 ```
-![PREGUNTA 1](./Picture/pregunta1.png)
+![](./Picture/pregunta1.png)
 
 **Insight:** Adidas registra una sólida escala comercial con $899.9M en ingresos históricos y una destacada eficiencia operativa, logrando capitalizar $332.1M como beneficio neto. Esto representa un margen operativo global del 36.9%, un indicador altamente saludable en el sector retail que confirma un control óptimo de los costos de producción y distribución.
 
@@ -112,7 +112,7 @@ WHERE Operating_Margin IS NOT NULL
 GROUP BY Sales_Method
 ORDER BY AVG(Operating_Margin) DESC;
 ```
-![PREGUNTA 3](./Picture/pregunta3.png)
+![PREGUNTA 3](./Picture/Pregunta3.png)
 
 **Insight:** El canal Online es el método más rentable para la compañía debido a sus bajos costos fijos de operación en comparación con las tiendas físicas. Esto demuestra que la estrategia de crecimiento de Adidas debe seguir priorizando la digitalización y el comercio electrónico. 
 
@@ -129,7 +129,7 @@ WHERE Total_Sales IS NOT NULL
 GROUP BY Region, State
 ORDER BY SUM(Total_Sales) DESC;
 ```
-![PREGUNTA 4](./Picture/pregunta4.png)
+![PREGUNTA 4](./Picture/Pregunta4.png)
 
 **Insight:** Las ventas muestran una alta concentración geográfica, donde solo 5 estados generan más del 60% de los ingresos totales. Esto sugiere que Adidas debe priorizar sus presupuestos de marketing y su capacidad de almacenamiento logístico en estas regiones de alto rendimiento.
 
@@ -145,7 +145,7 @@ WHERE Total_Sales IS NOT NULL AND Operating_Profit IS NOT NULL
 GROUP BY Retailer
 ORDER BY Ventas_Totales DESC;
 ```
-![PREGUNTA 5](./Picture/pregunta5.png)
+![PREGUNTA 5](./Picture/Pregunta5.png)
 
 **Insight:** El análisis permite identificar claramente a los distribuidores "estrella" que sostienen el volumen de ingresos y la rentabilidad de Adidas. Clasificarlos de esta manera ayuda a priorizar las negociaciones comerciales, asegurarles un suministro preferencial de inventario y diseñar promociones exclusivas con los socios que generan mayor valor real para el negocio.
 
@@ -161,8 +161,7 @@ WHERE Invoice_Date IS NOT NULL AND Total_Sales IS NOT NULL
 GROUP BY YEAR(Invoice_Date), MONTH(Invoice_Date)
 ORDER BY Anio ASC, Mes ASC;
 ```
-![PREGUNTA 6](./Picture/pregunta6.png)
-
+![PREGUNTA 6](./Picture/Pregunta6.png)
 **Insight:** El desglose temporal permite identificar picos de venta estacionales (asociados habitualmente a festividades, cambios de temporada o campañas de regreso a clases) y evaluar la tendencia general del negocio. Detectar estos patrones es fundamental para planificar el flujo de caja, anticipar las necesidades de contratación de personal temporal y programar las campañas de marketing antes de que inicien los meses de mayor demanda.
 
 ### 7. Talento Top en Ventas: Identificar las 3 ciudades con el mayor pico de facturación para cada una de las regiones analizadas.
@@ -186,7 +185,7 @@ FROM RankingCiudades
 WHERE Posicion <= 3
 ORDER BY Region ASC, Ventas_Totales DESC;
 ```
-![PREGUNTA 7](./Picture/pregunta7.png)
+![PREGUNTA 7](./Picture/Pregunta7.png)
 
 **Insight:** Este análisis filtra con precisión los tres epicentros comerciales más importantes de cada región. Conocer estos "hubs" clave permite concentrar los esfuerzos de distribución local, optimizar las entregas de última milla y replicar las estrategias de éxito de estas ciudades líderes en mercados secundarios.
 
@@ -211,7 +210,7 @@ GROUP BY
     END
 ORDER BY MIN(Total_Sales) DESC;
 ```
-![PREGUNTA 8](./Picture/pregunta8.png)
+![PREGUNTA 8](./Picture/Pregunta8.png)
 
 **Insight:** El análisis revela si los pedidos más grandes sacrifican rentabilidad (margen) para ganar volumen, o si mantienen la eficiencia. Identificar esta relación permite ajustar las políticas de descuentos por volumen y optimizar las estrategias de precios para asegurar que las transacciones masivas sigan siendo altamente rentables para Adidas.
 
@@ -227,7 +226,7 @@ WHERE Product IS NOT NULL
 GROUP BY Product
 ORDER BY Precio_Promedio_Unitario DESC;
 ```
-![PREGUNTA 9](./Picture/pregunta9.png)
+![PREGUNTA 9](./Picture/Pregunta9.png)
 
 **Insight:** El filtro `IS NOT NULL` elimina las filas vacías para asegurar promedios precisos. Esta consulta ayuda a entender la relación precio-demanda, permitiendo evaluar si los productos más caros reducen su rotación o si la marca mantiene un volumen alto en categorías premium, clave para ajustar precios sin perder clientes.
 
@@ -245,7 +244,7 @@ GROUP BY City, Product
 HAVING AVG(Operating_Margin) < (SELECT AVG(Operating_Margin) FROM AdidasSales)    
 ORDER BY Margen_Promedio_Local ASC;
 ```
-![PREGUNTA 10](./Picture/pregunta10.png)
+![PREGUNTA 10](./Picture/Pregunta10.png)
 
 **Insight:** Esta consulta detecta las zonas geográficas y líneas de productos cuyo rendimiento financiero está mermando la rentabilidad general de la compañía. Al filtrar los casos que se sitúan por debajo del promedio global, el equipo de Operaciones puede enfocar sus recursos en auditar costos logísticos locales o reestructurar las estrategias de precios en esos puntos específicos para recuperar los márgenes óptimos.
 
@@ -258,32 +257,5 @@ A partir de las consultas desarrolladas, se obtuvieron indicadores relevantes so
 Desde el punto de vista técnico, el proyecto fortaleció la aplicación de herramientas fundamentales de análisis de datos, incluyendo limpieza de información, consultas agregadas, agrupaciones, CTEs y funciones de ventana.
 
 Los resultados obtenidos demuestran cómo un proceso estructurado de análisis con SQL puede transformar datos transaccionales en información útil para evaluar tendencias, comparar indicadores y apoyar procesos de toma de decisiones basados en datos.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
