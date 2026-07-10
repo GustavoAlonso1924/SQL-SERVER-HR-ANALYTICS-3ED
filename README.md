@@ -115,7 +115,7 @@ ORDER BY AVG(Operating_Margin) DESC;
 
 **Insight:** El canal Online es el método más rentable para la compañía debido a sus bajos costos fijos de operación en comparación con las tiendas físicas. Esto demuestra que la estrategia de crecimiento de Adidas debe seguir priorizando la digitalización y el comercio electrónico. 
 
-### 4. Dominio Geográfico: ¿Qué regiones y estados de la federación concentran más del 60% de los ingresos totales de la compañía?
+### 4. Dominio Geográfico: ¿Qué regiones y estados concentran la mayor participación de ingresos de la compañía?
 
 ```sql
 SELECT TOP 5 
@@ -130,7 +130,7 @@ ORDER BY SUM(Total_Sales) DESC;
 ```
 ![PREGUNTA 4](./Picture/Pregunta4.png)
 
-**Insight:** Las ventas muestran una alta concentración geográfica, donde solo 5 estados generan más del 60% de los ingresos totales. Esto sugiere que Adidas debe priorizar sus presupuestos de marketing y su capacidad de almacenamiento logístico en estas regiones de alto rendimiento.
+**Insight:** El análisis permite identificar los estados y regiones con mayor contribución al ingreso total de Adidas, evidenciando la concentración geográfica del rendimiento comercial. Estos resultados ayudan a comprender qué mercados generan mayor valor y pueden servir como referencia para orientar estrategias de distribución, marketing y planificación comercial.
 
 ### 5. Desempeño de Distribuidores: Clasificar a los principales minoristas (Retailers) según el total de ventas y beneficio generado.
 
@@ -187,7 +187,7 @@ ORDER BY Region ASC, Ventas_Totales DESC;
 ```
 ![PREGUNTA 7](./Picture/Pregunta7.png)
 
-**Insight:** Este análisis filtra con precisión los tres epicentros comerciales más importantes de cada región. Conocer estos "hubs" clave permite concentrar los esfuerzos de distribución local, optimizar las entregas de última milla y replicar las estrategias de éxito de estas ciudades líderes en mercados secundarios.
+**Insight:** Este análisis permite identificar las ciudades con mayor contribución comercial dentro de cada región, facilitando la evaluación del desempeño geográfico y la identificación de los mercados con mayor potencial de ventas.
 
 ### 8. Eficiencia Comercial: Categorizar las transacciones según el volumen de ventas e identificar el promedio de margen operativo en cada categoría.
 
@@ -228,7 +228,7 @@ ORDER BY Precio_Promedio_Unitario DESC;
 ```
 ![PREGUNTA 9](./Picture/Pregunta9.png)
 
-**Insight:** El filtro `IS NOT NULL` elimina las filas vacías para asegurar promedios precisos. Esta consulta ayuda a entender la relación precio-demanda, permitiendo evaluar si los productos más caros reducen su rotación o si la marca mantiene un volumen alto en categorías premium, clave para ajustar precios sin perder clientes.
+**Insight:** La comparación entre el precio promedio por unidad y el volumen total de unidades vendidas permite identificar patrones en el comportamiento de la demanda según el posicionamiento de precios de cada producto. Estos resultados pueden apoyar la evaluación de estrategias comerciales y la gestión del portafolio de productos.
 
 ### 10. Alerta de Rentabilidad: Identificar qué combinaciones de producto y ciudad operan con un margen de ganancia crítico (inferior al promedio global).
 
