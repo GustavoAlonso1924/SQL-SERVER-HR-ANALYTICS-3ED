@@ -28,10 +28,10 @@ En este análisis se busca responder las siguientes preguntas de negocio relacio
 1. **Rendimiento Global:** ¿Cuál es el total de ingresos por ventas y el beneficio operativo histórico generado por la marca?
 2. **Líneas de Producto:** ¿Cuáles son las categorías de producto que acumulan el mayor volumen de unidades vendidas?
 3. **Rentabilidad por Canal:** ¿Cómo se compara el margen operativo promedio entre los diferentes métodos de venta (Online, In-store, Outlet)?
-4. **Dominio Geográfico:** ¿Qué regiones y estados de la federación concentran más del 60% de los ingresos totales de la compañía?
+4. **Dominio Geográfico:** ¿Qué regiones y estados concentran la mayor participación de ingresos de la compañía?
 5. **Desempeño de Distribuidores:** Clasificar a los principales minoristas (*Retailers*) según el total de ventas y beneficio generado.
 6. **Estacionalidad y Tiempo:** ¿Existe una tendencia de crecimiento en las ventas al comparar el comportamiento trimestral o mensual de los datos?
-7. **Talento Top en Ventas:** Identificar las 3 ciudades con el mayor pico de facturación para cada una de las regiones analizadas.
+7. **Principales Ciudades por Ventas:** Identificar las ciudades con mayor contribución de ingresos dentro de cada región analizada.
 8. **Eficiencia Comercial:** Categorizar las transacciones según el volumen de ventas e identificar el promedio de margen operativo en cada categoría.
 9. **Precios vs. Demanda:** ¿Existe una relación directa entre el precio por unidad establecido y el volumen total de unidades vendidas por producto?
 10. **Alerta de Rentabilidad:** Identificar qué combinaciones de producto y ciudad operan con un margen de ganancia crítico (inferior al promedio global).
